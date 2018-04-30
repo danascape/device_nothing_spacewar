@@ -111,5 +111,8 @@ BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)/prebuilt/vendor.img
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 
+# Verified Boot
+BOARD_AVB_ENABLE := true
+
 # Inherit from the proprietary version
 include vendor/nothing/spacewar/BoardConfigVendor.mk
