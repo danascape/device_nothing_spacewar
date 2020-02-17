@@ -90,6 +90,7 @@ TARGET_COPY_OUT_PRODUCT := product
 # Partitions - Recovery
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.default
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Partitions - Super
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
