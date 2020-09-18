@@ -48,6 +48,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
+
 # Partitions - Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
