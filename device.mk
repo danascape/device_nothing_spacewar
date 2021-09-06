@@ -11,6 +11,10 @@ $(call inherit-product, vendor/nothing/spacewar/spacewar-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
+# Soong Namespace
+PRODUCT_SOONG_NAMESPACES += \
+    device/nothing/spacewar
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
