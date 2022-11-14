@@ -57,6 +57,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
 TARGET_KERNEL_SOURCE := kernel/nothing/spacewar
+TARGET_KERNEL_NO_GCC := true
 
 # DTBO partition definitions
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
