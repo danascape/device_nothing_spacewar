@@ -23,9 +23,11 @@ AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     boot \
+    odm \
     product \
     system \
-    system_ext
+    system_ext \
+    vendor
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
@@ -62,8 +64,10 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 # Partitions - ODM
 TARGET_COPY_OUT_ODM := odm
 
+BOARD_PREBUILT_ODMIMAGE := $(DEVICE_PATH)/prebuilt/odm.img
+
 # Partitions - Spacewar
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := product system system_ext
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
 
 # Partitions - Product
@@ -96,6 +100,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 BUILD_WITHOUT_VENDOR := true
 
 TARGET_COPY_OUT_VENDOR := vendor
+
+BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)/prebuilt/vendor.img
 
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
