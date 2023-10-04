@@ -23,6 +23,7 @@ AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     boot \
+    dtbo \
     odm \
     product \
     system \
@@ -48,11 +49,15 @@ BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  4096
 BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_SEPARATED_DTBO := true
 
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig
 TARGET_KERNEL_SOURCE := kernel/nothing/spacewar
+
+# DTBO partition definitions
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 
 # Partitions - Metadata
 BOARD_USES_METADATA_PARTITION := true
