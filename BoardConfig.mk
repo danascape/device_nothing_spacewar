@@ -28,6 +28,8 @@ AB_OTA_PARTITIONS += \
     product \
     system \
     system_ext \
+    vbmeta \
+    vbmeta_system \
     vendor
 
 # Bootloader
