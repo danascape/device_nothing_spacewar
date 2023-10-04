@@ -71,3 +71,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
