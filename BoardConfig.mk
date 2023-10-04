@@ -30,7 +30,8 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor
+    vendor \
+    vendor_boot
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
@@ -85,6 +86,7 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_PRODUCT := product
 
 # Partitions - Recovery
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.default
 
 # Partitions - Super
@@ -111,6 +113,9 @@ BUILD_WITHOUT_VENDOR := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)/prebuilt/vendor.img
+
+# Partitions - Vendor_boot
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
